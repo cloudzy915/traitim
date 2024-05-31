@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #333;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom left, #fad0c4 0%, #ffd1ff 100%);
+}
+span {
+  position: absolute;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  animation: heart 1s linear infinite;
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    transform: translate(10px, 50px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(20px, 30px);
+    opacity: 0;
+  }
+}
+.anh {
+  display: flex;
+  height: 20rem;
+  gap: 1rem;
+}
+.anh > div {
+  flex: 1;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+}
+.anh > div:hover {
+  flex: 5;
+}
